@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "CS50Example2 Pokedex"
+rootProject.name = "CS50Example3 Pokedex"
 include ':app'

@@ -1,4 +1,4 @@
-package com.example.cs50example2pokedex;
+package com.example.cs50example3pokedex;
 
 public class Pokemon {
 

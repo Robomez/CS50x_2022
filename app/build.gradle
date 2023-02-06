@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.cs50example2pokedex'
+    namespace 'com.example.cs50example3pokedex'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.cs50example2pokedex"
+        applicationId "com.example.cs50example3pokedex"
         minSdk 28
         targetSdk 33
         versionCode 1

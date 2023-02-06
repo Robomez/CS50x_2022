@@ -1,4 +1,4 @@
-package com.example.cs50example2pokedex;
+package com.example.cs50example3pokedex;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
