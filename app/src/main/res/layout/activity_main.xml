@@ -28,6 +28,18 @@
             android:text="Sepia"
             android:onClick="applySepia"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toon"
+            android:onClick="applyToon"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sketch"
+            android:onClick="applySketch"/>
+
     </LinearLayout>
 
 </ScrollView>
