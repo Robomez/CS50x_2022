@@ -7,11 +7,12 @@
     tools:context=".NoteActivity">
 
     <EditText
+        android:id="@+id/note_edit_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent"
         android:gravity="top"
         android:padding="10dp"
-        android:id="@+id/note_edit_text" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
