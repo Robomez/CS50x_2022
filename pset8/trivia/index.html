@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Question?</h3>
+                <!-- Text apears here -->
+                <p1></p1>
+                <!-- 3 answer buttons, 1 correct -->
+                <table>
+                    <tr>
+                        <td>
+                            <button id="button1">Polar bears</button>
+                        </td>
+                        <td>
+                            <button id="button2">Caterpillar</button>
+                        </td>
+                        <td>
+                            <button id="button3">Question</button>
+                        </td>
+                        <td>
+                            <button id="button4">Equinox</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>How part 2 is named?</h3>
+                <!-- Text apears here -->
+                <p2></p2>
+                <div>
+                <!-- Input text here and press a button -->
+                <input autocomplete="on" placeholder="Type in here" type="text">
+                <button id="buttonText">Send it</button>
+
+            </div>
+        </div>
+        
+        <script>
+
+            // Buttons change color when a user clicks on them
+            // If incorrect button, it should turn red and text should appear beneath the question saying "Incorrect"
+            // If correct, turn green and say "Correct!"
+
+            document.querySelector('#button3').addEventListener('click', function() {
+                document.getElementById('button3').style.backgroundColor = 'green';
+                document.querySelector('p1').innerText = 'Correct!';
+            });
+            document.querySelector('#button1').onclick = function() {
+                document.querySelector('#button1').style.backgroundColor = 'red';
+                document.querySelector('p1').innerText = 'Inorrect';
+            }
+            document.querySelector('#button2').onclick = function() {
+                document.querySelector('#button2').style.backgroundColor = 'red';
+                document.querySelector('p1').innerText = 'Inorrect';
+            }
+            document.querySelector('#button4').onclick = function() {
+                document.querySelector('#button4').style.backgroundColor = 'red';
+                document.querySelector('p1').innerText = 'Inorrect';
+            }
+
+            // If incorrect, the text field turns red and text beneath appears and says "Incorrect"
+            // If correct, the text field turns red and text beneath appears and says "Correct!"
+            document.querySelector('#buttonText').onclick = function() {
+                let texty = 'Free Response';
+                let input = document.querySelector('input');
+                if (input.value == texty) {
+                    document.querySelector('p2').innerText = 'Correct!';
+                    input.style.backgroundColor = 'green';
+                }
+                else {
+                    document.querySelector('p2').innerText = 'Incorrect';
+                    input.style.backgroundColor = 'red';
+                }
+            }
+
+        </script>
+    </body>
+</html>

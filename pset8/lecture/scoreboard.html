@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Scoreboard</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            td {
+                border: 2px solid black;
+            }
+
+            #add1 {
+                background-color: #012169;
+                color: aliceblue;
+            }
+
+            #add2 {
+                background-color: #4B9CD3;
+            }
+
+            .title {
+                background-color: lightgray;
+            }
+
+            .centered {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body class="centered">
+        <h1>Duke vs. UNC Basketball game</h1>
+        <main>
+            <p>Click the buttons to add a point to each team</p>
+            <table>
+                <tr class="title">
+                    <td>Team 1</td>
+                    <td>Team 2</td>
+                </tr>
+                <tr>
+                    <td id="score1">0</td>
+                    <td id="score2">0</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="add1">+1</button>
+                    </td>
+                    <td>
+                        <button id="add2">+1</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="reset">Reset score</button>
+                    </td>
+                </tr>
+            </table>
+        </main>
+        <script>
+            let team1 = 0;
+            let team2 = 0;
+
+            document.querySelector('#add1').onclick = function() {
+                team1 = team1 + 1;
+                document.querySelector('#score1').innerHTML = team1;
+                if (team1 > 3) {
+                    alert("Team 1 has won!");
+                }
+            }
+
+            document.querySelector('#add2').onclick = function() {
+                team2 = team2 + 1;
+                document.querySelector('#score2').innerHTML = team2;
+                if (team2 > 3) {
+                    alert("Team 1 has won!");
+                }
+            }
+
+
+
+
+            document.querySelector('#reset').onclick = function() {
+                team1 = 0
+                team2 = 0
+                document.querySelector('#score1').innerHTML = team1;
+                document.querySelector('#score2').innerHTML = team2;
+            }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+        <tr>
+            <td>Name</td>
+            <td>Symbol</td>
+            <td>Number of shares</td>
+            <td>Current price</td>
+            <td>Total value</td>
+        </tr>
+        <tr>
+            {% for row in range(symbols|length) %}
+                {% if symbols[row].number != 0 %}
+                    <tr>
+                        <td>{{ name[row] }}</td>
+                        <td>{{ symbols[row].symbol }}</td>
+                        <td>{{ symbols[row].number }}</td>
+                        <td>{{ priceusd[row] }}</td>
+                        <td>{{ totalusd[row] }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Cash left:</td>
+            <td>{{ cash }}</td>
+        </tr>
+        <tr>
+            <td>Grand total:</td>
+            <td>{{ grand }}</td>
+        </tr>
+    </table>
+
+    <button type="submit" id="more_cash" name="more_cash" class="btn btn-primary">Add cash</button>
+    <ul id="cash_amount"></ul>
+    <script>
+
+        document.querySelector('#more_cash').addEventListener('click', function() {
+            document.querySelector('#cash_amount').innerHTML = '<form action="/cash" method="post"><p></p><input autocomplete="off" class="form-control mx-auto w-auto" name="cash_input" placeholder="Cash" type="number" min="0"><p></p><button class="btn btn-primary" type="submit">Add</button></form>';
+        });
+        
+    </script>
+
+{% endblock %}

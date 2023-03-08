@@ -1,0 +1,11 @@
+sort1 uses: bubble
+
+How do you know?: On sorted lists bubble (Ω(n)) and merge (Ω(nlogn)) are really close. On unsorted lists bubble (O(n^2)) is much worse than merge (O(nlogn)).
+
+sort2 uses: merge
+
+How do you know?: On sorted lists bubble (Ω(n)) and merge (Ω(nlogn)) are really close. Merge sort is much faster on unsorted or reversed lists because its upper bound is O(nlogn) instead of O(n^2).
+
+sort3 uses: selection
+
+How do you know?: Selection sort is much slower on sorted lists because its lower bound is Ω(n^2); not Ω(n) or Ω(nlogn).

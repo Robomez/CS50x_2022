@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+        <tr>
+            <td>Type</td>
+            <td>Symbol</td>
+            <td>Price</td>
+            <td>Shares</td>
+            <td>Time</td>
+        </tr>
+        {% for i in range(history|length) %}
+            <tr>
+                <td>
+                    {% if history[i]['shares'] > 0 %}
+                        Bought
+                    {% else %}
+                        Sold
+                    {% endif %}
+                </td>
+                <td>{{ history[i]['symbol'] }}</td>
+                <td>{{ history[i]['price'] | usd }}</td>
+                <td>
+                    {% if history[i]['shares'] > 0 %}
+                        {{ history[i]['shares'] }}
+                    {% else %}
+                        {{ -history[i]['shares'] }}
+                    {% endif %}
+                </td>
+                <td>{{ history[i]['time'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

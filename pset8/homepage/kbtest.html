@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Test keyboard</title>
+    </head>
+    <body>
+        <table class="table table-dark rtable-hover">
+            <th colspan="2">
+                Maybe it's possible to use JS to show when a key is pressed
+            </th>
+            <tr>
+                <td class="menu">
+                    <div class="list-group">
+                        <a class="list-group-item list-group-item-dark" href="index.html">Main</a>
+                        <a class="list-group-item list-group-item-dark" href="cat.html">Cat</a>
+                        <a class="list-group-item list-group-item-action active" href="kbtest.html">Keyboard test</a>
+                        <a class="list-group-item list-group-item-dark" href="table.html">Table</a>
+                    </div>
+                </td>
+                <td id="helloText">
+                    <p>
+                        <table>
+                            <td>
+                                <tr class="tablo">
+                                    <td id="F">Press F</td>
+                                </tr>
+                            </td>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <script>
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key == 'f') {
+                    document.querySelector('#F').style.backgroundColor = 'green';
+                }
+                else {
+                    document.querySelector('#F').style.backgroundColor = 'Red';
+                }
+            });
+
+            document.addEventListener('keyup', function(event) {
+                document.querySelector('#F').style.backgroundColor = '';
+            });
+
+
+        </script>
+    </body>
+</html>

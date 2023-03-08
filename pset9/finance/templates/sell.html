@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <select name="symbol">
+                <option disabled selected>Select symbol</option>
+                {% for i in range(symbols|length) %}
+                    {% if symbols[i]['sum'] != 0 %}
+                        <option>{{ symbols[i]['symbol'] }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="shares" placeholder="Type in number of shares to sell" type="number">
+        </div>
+        <P></P>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+{% endblock %}

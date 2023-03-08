@@ -1,0 +1,43 @@
+body
+{
+    background-color: black;
+}
+
+#contents
+{
+    width: 100%;
+}
+
+.menu
+{
+    border-right: 1px solid aliceblue;
+    width: auto;
+}
+
+#helloText
+{
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+
+th
+{
+    text-align: center;
+}
+
+img
+{
+    height: auto;
+    max-width: 100%;
+}
+
+#catImage
+{
+    text-align:center
+}
+
+.tablo
+{
+    border: 2px solid #4b9cd3;
+}

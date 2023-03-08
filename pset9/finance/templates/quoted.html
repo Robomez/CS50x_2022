@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Symbol</td>
+            </tr>
+            <tr>
+                {% for row in symbol %}
+                    <td>
+                        {{ symbol[row] }}
+                    </td>
+                {% endfor %}
+            </tr>
+
+        </table>
+
+    </div>
+{% endblock %}
